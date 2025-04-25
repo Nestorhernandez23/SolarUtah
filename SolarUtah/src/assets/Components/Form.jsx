@@ -226,7 +226,7 @@ const Form = () => {
                         <button 
                           type="button" 
                           onClick={nextStep}
-                          className="bg-black text-black rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center"
+                          className="bg-black text- rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center"
                         >
                           Continue
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
