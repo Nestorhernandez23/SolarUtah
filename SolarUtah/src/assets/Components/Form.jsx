@@ -95,6 +95,7 @@ const Form = () => {
 
     // Handle form submission
     const handleSubmit = (e) => {
+        e.preventDefault();
         // Allow the form to submit to formsubmit.co
         setIsSubmitting(true);
         
@@ -112,8 +113,30 @@ const Form = () => {
         // Add a class to body to prevent overscroll on mobile
         document.body.classList.add('overflow-x-hidden');
         
+        // iOS input styling fix
+        const style = document.createElement('style');
+        style.textContent = `
+          input, select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 5px !important;
+          }
+          
+          /* Fix iOS zoom on input focus */
+          @media screen and (-webkit-min-device-pixel-ratio:0) { 
+            select,
+            textarea,
+            input {
+              font-size: 16px !important;
+            }
+          }
+        `;
+        document.head.appendChild(style);
+        
         return () => {
             document.body.classList.remove('overflow-x-hidden');
+            document.head.removeChild(style);
         };
     }, []);
 
@@ -239,6 +262,8 @@ const Form = () => {
                             value={formData.phone}
                             onChange={handleChange}
                             required 
+                            pattern="[0-9]{3}[0-9]{3}[0-9]{4}|[0-9]{3}-[0-9]{3}-[0-9]{4}|\([0-9]{3}\)[0-9]{3}-[0-9]{4}"
+                            inputMode="tel"
                             className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-black focus:border-black outline-none transition"
                             placeholder="(555) 555-5555"
                           />
@@ -658,7 +683,7 @@ const Form = () => {
                   <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
                     <button 
                       onClick={() => window.location.reload()}
-                      className="inline-flex items-center justify-center bg-black text-white py-2 px-4 sm:py-3 sm:px-5 rounded-md text-xs sm:text-sm hover:bg-gray-800 transition"
+                      className="inline-flex items-center justify-center bg-blue-950 text-black py-2 px-4 sm:py-3 sm:px-5 rounded-md text-xs sm:text-sm hover:bg-gray-800 transition"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -668,7 +693,7 @@ const Form = () => {
                     
                     <a 
                       href="#" 
-                      className="inline-flex items-center justify-center bg-green-600 text-white py-2 px-4 sm:py-3 sm:px-5 rounded-md text-xs sm:text-sm hover:bg-green-700 transition"
+                      className="inline-flex items-center justify-center bg-green-900 text-amber-200 py-2 px-4 sm:py-3 sm:px-5 rounded-md text-xs sm:text-sm hover:bg-green-700 transition"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
