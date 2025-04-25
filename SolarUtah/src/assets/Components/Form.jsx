@@ -226,7 +226,7 @@ const Form = () => {
                         <button 
                           type="button" 
                           onClick={nextStep}
-                          className="bg-amber-300 text-white rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center"
+                          className="bg-black text-black rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center"
                         >
                           Continue
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
@@ -301,7 +301,7 @@ const Form = () => {
                         <button 
                           type="button" 
                           onClick={nextStep}
-                          className="w-full sm:w-auto bg-black text-black rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center"
+                          className="w-full sm:w-auto bg-black text-white rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center"
                         >
                           Continue
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
@@ -393,7 +393,7 @@ const Form = () => {
                         <button 
                           type="button" 
                           onClick={nextStep}
-                          className="w-full sm:w-auto bg-black text-black rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center"
+                          className="w-full sm:w-auto bg-black text-white rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center"
                         >
                           Continue
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
@@ -490,7 +490,7 @@ const Form = () => {
                         <button 
                           type="button" 
                           onClick={nextStep}
-                          className="w-full sm:w-auto bg-black text-black rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center"
+                          className="w-full sm:w-auto bg-black text-white rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center"
                         >
                           Continue
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
@@ -601,7 +601,7 @@ const Form = () => {
                         <button 
                           type="submit" 
                           disabled={isSubmitting}
-                          className="w-full sm:w-auto bg-black text-black rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center disabled:opacity-70"
+                          className="w-full sm:w-auto bg-black text-white rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center disabled:opacity-70"
                         >
                           {isSubmitting ? (
                             <>
@@ -683,7 +683,7 @@ const Form = () => {
                   <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
                     <button 
                       onClick={() => window.location.reload()}
-                      className="inline-flex items-center justify-center bg-blue-950 text-black py-2 px-4 sm:py-3 sm:px-5 rounded-md text-xs sm:text-sm hover:bg-gray-800 transition"
+                      className="inline-flex items-center justify-center bg-black text-white py-2 px-4 sm:py-3 sm:px-5 rounded-md text-xs sm:text-sm hover:bg-gray-800 transition"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -693,7 +693,7 @@ const Form = () => {
                     
                     <a 
                       href="#" 
-                      className="inline-flex items-center justify-center bg-green-900 text-amber-200 py-2 px-4 sm:py-3 sm:px-5 rounded-md text-xs sm:text-sm hover:bg-green-700 transition"
+                      className="inline-flex items-center justify-center bg-green-600 text-white py-2 px-4 sm:py-3 sm:px-5 rounded-md text-xs sm:text-sm hover:bg-green-700 transition"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
