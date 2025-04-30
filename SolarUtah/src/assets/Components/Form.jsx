@@ -7,12 +7,14 @@ const Form = () => {
   const [errors, setErrors] = useState({
     name: "",
     email: "",
+    address: "",
     phone: "",
     zip: ""
   });
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    address: "",
     phone: "",
     zip: "",
     homeowner: "",
@@ -442,6 +444,25 @@ const Form = () => {
                         <p className="text-red-500 text-xs italic mt-1">{errors.email}</p>
                       )}
                     </div>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="address"
+                      className="block text-sm font-bold text-gray-700 mb-1"
+                    >
+                      Address
+                    </label>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      value={formData.address}
+                      onChange={handleChange}
+                      required
+                      className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-black focus:border-black outline-none transition"
+                      placeholder="Enter your address"
+                    />
                   </div>
 
                   <div className="flex justify-end mt-6 sm:mt-8">
@@ -1020,6 +1041,7 @@ const Form = () => {
                   {/* Hidden inputs to store all form data for FormSubmit */}
                   <input type="hidden" name="name" value={formData.name} />
                   <input type="hidden" name="email" value={formData.email} />
+                  <input type="hidden" name="address" value={formData.address} />
                   <input type="hidden" name="phone" value={formData.phone} />
                   <input type="hidden" name="zip" value={formData.zip} />
                   <input
@@ -1044,6 +1066,10 @@ const Form = () => {
                       <p>
                         <span className="font-bold">Email:</span>{" "}
                         {formData.email}
+                      </p>
+                      <p>
+                        <span className="font-bold">Address:</span>{" "}
+                        {formData.address}
                       </p>
                       <p>
                         <span className="font-bold">Phone:</span>{" "}
