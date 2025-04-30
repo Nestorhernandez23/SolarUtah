@@ -9,7 +9,7 @@ const Form = () => {
     email: "",
     address: "",
     phone: "",
-    zip: ""
+    zip: "",
   });
   const [formData, setFormData] = useState({
     name: "",
@@ -38,7 +38,8 @@ const Form = () => {
 
   // Validate email format
   const validateEmail = (email) => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   };
 
@@ -66,9 +67,9 @@ const Form = () => {
 
     // Clear the error when the user is typing
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: ""
+        [name]: "",
       }));
     }
   };
@@ -76,27 +77,28 @@ const Form = () => {
   // Field validation on blur
   const handleBlur = (e) => {
     const { name, value } = e.target;
-    
+
     // Validate based on field name
     if (name === "email" && value) {
       if (!validateEmail(value)) {
-        setErrors(prev => ({
+        setErrors((prev) => ({
           ...prev,
-          email: "Please enter a valid email address (e.g., name@example.com)"
+          email: "Please enter a valid email address (e.g., name@example.com)",
         }));
       }
     } else if (name === "phone" && value) {
       if (!validatePhone(value)) {
-        setErrors(prev => ({
+        setErrors((prev) => ({
           ...prev,
-          phone: "Please enter a valid US phone number (e.g., (555) 555-5555 or 5555555555)"
+          phone:
+            "Please enter a valid US phone number (e.g., (555) 555-5555 or 5555555555)",
         }));
       }
     } else if (name === "zip" && value) {
       if (!validateZip(value)) {
-        setErrors(prev => ({
+        setErrors((prev) => ({
           ...prev,
-          zip: "Please enter a valid 5-digit US ZIP code"
+          zip: "Please enter a valid 5-digit US ZIP code",
         }));
       }
     }
@@ -127,52 +129,61 @@ const Form = () => {
     if (step === 1) {
       // Validate name and email
       if (!formData.name) {
-        setErrors(prev => ({...prev, name: "Please enter your full name"}));
+        setErrors((prev) => ({ ...prev, name: "Please enter your full name" }));
         return;
       }
-      
+
       if (!formData.email) {
-        setErrors(prev => ({...prev, email: "Please enter your email address"}));
+        setErrors((prev) => ({
+          ...prev,
+          email: "Please enter your email address",
+        }));
         return;
       }
-      
+
       if (!validateEmail(formData.email)) {
-        setErrors(prev => ({
-          ...prev, 
-          email: "Please enter a valid email address (e.g., name@example.com)"
+        setErrors((prev) => ({
+          ...prev,
+          email: "Please enter a valid email address (e.g., name@example.com)",
         }));
         return;
       }
     } else if (step === 2) {
       // Validate phone and ZIP
       if (!formData.phone) {
-        setErrors(prev => ({...prev, phone: "Please enter your phone number"}));
-        return;
-      }
-      
-      if (!validatePhone(formData.phone)) {
-        setErrors(prev => ({
-          ...prev, 
-          phone: "Please enter a valid US phone number (e.g., (555) 555-5555 or 5555555555)"
+        setErrors((prev) => ({
+          ...prev,
+          phone: "Please enter your phone number",
         }));
         return;
       }
-      
-      if (!formData.zip) {
-        setErrors(prev => ({...prev, zip: "Please enter your ZIP code"}));
+
+      if (!validatePhone(formData.phone)) {
+        setErrors((prev) => ({
+          ...prev,
+          phone:
+            "Please enter a valid US phone number (e.g., (555) 555-5555 or 5555555555)",
+        }));
         return;
       }
-      
+
+      if (!formData.zip) {
+        setErrors((prev) => ({ ...prev, zip: "Please enter your ZIP code" }));
+        return;
+      }
+
       if (!validateZip(formData.zip)) {
-        setErrors(prev => ({
-          ...prev, 
-          zip: "Please enter a valid 5-digit US ZIP code"
+        setErrors((prev) => ({
+          ...prev,
+          zip: "Please enter a valid 5-digit US ZIP code",
         }));
         return;
       }
     } else if (step === 3) {
       if (!formData.roofShade || !formData.installationTimeframe) {
-        alert("Please complete all fields about your roof and installation timeline");
+        alert(
+          "Please complete all fields about your roof and installation timeline"
+        );
         return;
       }
     } else if (step === 4) {
@@ -184,14 +195,14 @@ const Form = () => {
 
     // Clear errors for this step if validation passes
     if (step === 1) {
-      setErrors(prev => ({...prev, name: "", email: ""}));
+      setErrors((prev) => ({ ...prev, name: "", email: "" }));
     } else if (step === 2) {
-      setErrors(prev => ({...prev, phone: "", zip: ""}));
+      setErrors((prev) => ({ ...prev, phone: "", zip: "" }));
     }
 
     // Proceed to next step
     setStep((prev) => prev + 1);
-    
+
     // Scroll to top on mobile when changing steps
     window.scrollTo(0, 0);
   };
@@ -418,7 +429,9 @@ const Form = () => {
                         placeholder="Enter your full name"
                       />
                       {errors.name && (
-                        <p className="text-red-500 text-xs italic mt-1">{errors.name}</p>
+                        <p className="text-red-500 text-xs italic mt-1">
+                          {errors.name}
+                        </p>
                       )}
                     </div>
 
@@ -441,7 +454,9 @@ const Form = () => {
                         placeholder="email@example.com"
                       />
                       {errors.email && (
-                        <p className="text-red-500 text-xs italic mt-1">{errors.email}</p>
+                        <p className="text-red-500 text-xs italic mt-1">
+                          {errors.email}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -541,7 +556,9 @@ const Form = () => {
                         placeholder="(555) 555-5555"
                       />
                       {errors.phone && (
-                        <p className="text-red-500 text-xs italic mt-1">{errors.phone}</p>
+                        <p className="text-red-500 text-xs italic mt-1">
+                          {errors.phone}
+                        </p>
                       )}
                     </div>
 
@@ -566,7 +583,9 @@ const Form = () => {
                         pattern="[0-9]{5}"
                       />
                       {errors.zip && (
-                        <p className="text-red-500 text-xs italic mt-1">{errors.zip}</p>
+                        <p className="text-red-500 text-xs italic mt-1">
+                          {errors.zip}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -1041,7 +1060,11 @@ const Form = () => {
                   {/* Hidden inputs to store all form data for FormSubmit */}
                   <input type="hidden" name="name" value={formData.name} />
                   <input type="hidden" name="email" value={formData.email} />
-                  <input type="hidden" name="address" value={formData.address} />
+                  <input
+                    type="hidden"
+                    name="address"
+                    value={formData.address}
+                  />
                   <input type="hidden" name="phone" value={formData.phone} />
                   <input type="hidden" name="zip" value={formData.zip} />
                   <input
