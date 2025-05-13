@@ -358,7 +358,7 @@ const Form = () => {
         <div className="p-4 sm:p-8">
           {!isSubmitted ? (
             <form
-              action="https://formsubmit.co/nestorisraelhernandez@gmail.com"
+              action="https://formsubmit.co/gridguardconsultant@gmail.com"
               method="POST"
               onSubmit={handleSubmit}
               className="space-y-5"
@@ -594,7 +594,7 @@ const Form = () => {
                     <button
                       type="button"
                       onClick={prevStep}
-                      className="w-full sm:w-auto bg-gray-200 text-gray-800 rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-300 transition duration-300 flex items-center justify-center"
+                      className="w-full sm:w-auto bg-orange-100 text-blue-900 rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-orange-200 transition duration-300 flex items-center justify-center"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -614,7 +614,7 @@ const Form = () => {
                     <button
                       type="button"
                       onClick={nextStep}
-                      className="w-full sm:w-auto bg-black text-white rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center"
+                      className="w-full sm:w-auto bg-blue-900 text-white rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-blue-800 transition duration-300 flex items-center justify-center"
                     >
                       Continue
                       <svg
@@ -754,7 +754,7 @@ const Form = () => {
                     <button
                       type="button"
                       onClick={prevStep}
-                      className="w-full sm:w-auto bg-gray-200 text-gray-800 rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-300 transition duration-300 flex items-center justify-center"
+                      className="w-full sm:w-auto bg-orange-100 text-blue-900 rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-orange-200 transition duration-300 flex items-center justify-center"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -774,7 +774,7 @@ const Form = () => {
                     <button
                       type="button"
                       onClick={nextStep}
-                      className="w-full sm:w-auto bg-black text-white rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center"
+                      className="w-full sm:w-auto bg-blue-900 text-white rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-blue-800 transition duration-300 flex items-center justify-center"
                     >
                       Continue
                       <svg
@@ -940,7 +940,7 @@ const Form = () => {
                     <button
                       type="button"
                       onClick={prevStep}
-                      className="w-full sm:w-auto bg-gray-200 text-gray-800 rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-300 transition duration-300 flex items-center justify-center"
+                      className="w-full sm:w-auto bg-orange-100 text-blue-900 rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-orange-200 transition duration-300 flex items-center justify-center"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -960,7 +960,7 @@ const Form = () => {
                     <button
                       type="button"
                       onClick={nextStep}
-                      className="w-full sm:w-auto bg-black text-white rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center"
+                      className="w-full sm:w-auto bg-blue-900 text-white rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-blue-800 transition duration-300 flex items-center justify-center"
                     >
                       Continue
                       <svg
@@ -1117,7 +1117,7 @@ const Form = () => {
                     <button
                       type="button"
                       onClick={prevStep}
-                      className="w-full sm:w-auto bg-gray-200 text-gray-800 rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-300 transition duration-300 flex items-center justify-center"
+                      className="w-full sm:w-auto bg-orange-100 text-blue-900 rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-orange-200 transition duration-300 flex items-center justify-center"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -1137,7 +1137,7 @@ const Form = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full sm:w-auto bg-black text-white rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-gray-800 transition duration-300 flex items-center justify-center disabled:opacity-70"
+                      className="w-full sm:w-auto bg-blue-900 text-white rounded-md py-2 px-4 sm:py-3 sm:px-6 font-bold hover:bg-blue-800 transition duration-300 flex items-center justify-center disabled:opacity-70"
                     >
                       {isSubmitting ? (
                         <>
