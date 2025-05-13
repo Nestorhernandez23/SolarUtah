@@ -227,7 +227,7 @@ const Form = () => {
     const formData = new FormData(formElement);
 
     // Submit form using fetch API
-    fetch("https://formsubmit.co/ajax/nestorisraelhernandez@gmail.com", {
+    fetch("https://formsubmit.co/ajax/gridguardconsultant@gmail.com", {
       method: "POST",
       body: formData,
     })
